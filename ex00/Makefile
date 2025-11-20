@@ -1,6 +1,6 @@
-NAME = Harl
+NAME = Fixed
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra
+CXXFLAGS = -g
 
 SOURCES = main.cpp Fixed.cpp 
 		
