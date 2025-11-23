@@ -2,7 +2,7 @@ NAME = Fixed
 CXX = c++
 CXXFLAGS = -g
 
-SOURCES = main.cpp Fixed.cpp 
+SOURCES = main.cpp Fixed.cpp fixedOverloads.cpp
 		
 OBJECTS = $(SOURCES:.cpp=.o)
 
