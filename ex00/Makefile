@@ -1,6 +1,6 @@
 NAME = Fixed
 CXX = c++
-CXXFLAGS = -g
+CXXFLAGS = -Wall -Werror -Wextra
 
 SOURCES = main.cpp Fixed.cpp 
 		

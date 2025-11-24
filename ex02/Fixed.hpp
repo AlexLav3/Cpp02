@@ -44,6 +44,7 @@ class Fixed
     Fixed& operator--();
     Fixed operator--(int);
 
+    //min&max
     static Fixed& min(Fixed& n1, Fixed& n2);
     static const Fixed& min(const Fixed& n1, const Fixed& n2);
 
@@ -53,16 +54,3 @@ class Fixed
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& obj);
-
-/*
-• A static member function min that takes two references to fixed-point numbers as
-parameters, and returns a reference to the smallest one.
-
-• A static member function min that takes two references to constant fixed-point
-numbers as parameters, and returns a reference to the smallest one.
-
-• A static member function max that takes two references to fixed-point numbers as
-parameters, and returns a reference to the greatest one.
-• A static member function max that takes two references to constant fixed-point
-numbers as parameters, and returns a reference to the greatest 
-*/
