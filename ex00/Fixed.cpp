@@ -1,7 +1,7 @@
 #include "Fixed.hpp"
 
-Fixed::Fixed(){
-    this->value = 0;
+const int Fixed::fract_bits = 8;
+Fixed::Fixed() : value(0){
     std::cout << "Default constructor called" << std::endl;
 }
 
@@ -9,9 +9,9 @@ Fixed::~Fixed(){
     std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &copy){
+Fixed::Fixed(const Fixed &other){
     std::cout << "Copy constructor called" << std::endl;
-    this->value = copy.value;
+    this->value = other.value;
 }
 
 Fixed& Fixed::operator= (const Fixed& Fixed){

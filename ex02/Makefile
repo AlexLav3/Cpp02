@@ -1,6 +1,6 @@
 NAME = Fixed
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra
+CXXFLAGS =  
 
 SOURCES = main.cpp Fixed.cpp fixedOverloads.cpp minMax.cpp
 		

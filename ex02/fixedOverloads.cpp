@@ -2,6 +2,7 @@
 
 // comparisons
 bool Fixed::operator==(const Fixed &other) const{
+    //std::cout << "== called" << std::endl;
     return this->value == other.value;
 }
 
@@ -14,6 +15,7 @@ bool Fixed::operator>(const Fixed &other) const{
 }
  
 bool Fixed::operator<(const Fixed &other) const{
+    //std::cout << "< called" << std::endl;
     return this->value < other.value;
 }
 

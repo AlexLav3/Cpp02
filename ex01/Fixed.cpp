@@ -1,5 +1,6 @@
 #include "Fixed.hpp"
 
+const int Fixed::fract_bits = 8; // number of fractional bits; scale factor = 2^8 = 256 internally, numbers are stored as integers multiplied by 256.
 Fixed::Fixed()
 : value(0){
 	std::cout << "Default constructor called" << std::endl;
@@ -17,9 +18,9 @@ Fixed::~Fixed(){
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &copy){
+Fixed::Fixed(const Fixed &other){
 	std::cout << "Copy constructor called" << std::endl;
-	this->value = copy.value;
+	this->value = other.value;
 }
 
 Fixed &Fixed::operator=(const Fixed &Fixed){
@@ -30,16 +31,16 @@ Fixed &Fixed::operator=(const Fixed &Fixed){
 }
 
 int Fixed::getRawBits() const{
-	std::cout << "getRawBits member function called" << std::endl;
+	//std::cout << "getRawBits member function called" << std::endl;
 	return (value);
 }
 
 float Fixed::toFloat() const{
-	return (this->value / (float)(1 << fract_bits));
+	return (float)this->value / (1 << fract_bits); //reverse the internal scaling to get the real float
 }
 
 int Fixed::toInt() const{
-	return (this->value >> fract_bits);
+	return (this->value >> fract_bits); //extract the integer part by dividing by 2^fract_bits
 }
 
 void Fixed::setRawBits(int const raw){

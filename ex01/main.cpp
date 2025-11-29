@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 
-//given code given in subject
+//given code given in subject for testing
 int main( void ) 
 {
     Fixed a;
@@ -20,5 +20,17 @@ int main( void )
     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
     std::cout << "d is " << d.toInt() << " as integer" << std::endl;
     
+    //other tests I added
+    // a.setRawBits(8);
+    // std::cout << "a raw bits: " << a.getRawBits() << std::endl;
+    // std::cout << "a is " << a.toFloat() << " as float" << std::endl;
+    // std::cout << "a is " << a.toInt() << " as int" << std::endl;
+
+    // a = Fixed(1234.4321f);
+    // std::cout << "a is " << a.toFloat() << " as float" << std::endl;
+    // std::cout << "a is " << a.toInt() << " as int" << std::endl;
+    // std::cout << "b is " << b.toFloat() << " as float" << std::endl;
+    // std::cout << "c is " << c.toFloat() << " as float" << std::endl;
+    // std::cout << "d is " << d.toFloat() << " as float" << std::endl;
     return 0;
 }

@@ -8,13 +8,13 @@ class Fixed
 {
     private: 
     int value; 
-    static const int fract_bits = 8; 
+    static const int fract_bits; 
 
     public:
     Fixed();
     Fixed(const int arg);
     Fixed(const float arg);
-    Fixed(const Fixed &copy);
+    Fixed(const Fixed &other);
     ~Fixed();
     
     Fixed& operator= (const Fixed& Fixed);
